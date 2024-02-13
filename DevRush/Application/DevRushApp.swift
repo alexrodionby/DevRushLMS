@@ -12,7 +12,7 @@ struct DevRushApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeMainView()
+            AuthorizationMainView()
         }
     }
 }

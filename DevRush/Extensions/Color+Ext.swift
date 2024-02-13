@@ -34,4 +34,5 @@ struct CustomColors {
     let lightDarkC4 = Color("lightDarkC4")
     let lightDarkC5 = Color("lightDarkC5")
     let lightDarkC6 = Color("lightDarkC6")
+    let baseWhite = Color("baseWhite")
 }
