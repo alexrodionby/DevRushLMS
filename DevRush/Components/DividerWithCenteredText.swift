@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DividerWithCenteredText: View {
     
-    var dividerText: LocalizedStringKey = LocalizedStringKey("или")
+    var dividerText: LocalizedStringKey = LocalizedStringKey("or")
     var dividerLineColor: Color = Color.custom.lightDarkC4
     var dividerLineHeight: CGFloat = 1
     var dividerTextColor: Color = Color.custom.lightDarkC4

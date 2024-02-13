@@ -12,6 +12,10 @@
 		A16877922B7B6258004DF88F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A16877912B7B6258004DF88F /* Localizable.xcstrings */; };
 		A16877952B7B7028004DF88F /* LabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16877942B7B7028004DF88F /* LabelButton.swift */; };
 		A16877972B7B7461004DF88F /* DividerWithCenteredText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16877962B7B7461004DF88F /* DividerWithCenteredText.swift */; };
+		A168779C2B7B91A2004DF88F /* CoursesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168779B2B7B91A2004DF88F /* CoursesMainView.swift */; };
+		A168779E2B7B91B4004DF88F /* LibrariesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168779D2B7B91B4004DF88F /* LibrariesMainView.swift */; };
+		A16877A02B7B91C5004DF88F /* ChatMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168779F2B7B91C5004DF88F /* ChatMainView.swift */; };
+		A16877A22B7B9520004DF88F /* TabBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16877A12B7B9520004DF88F /* TabBottomView.swift */; };
 		A170A43B2B7926C50045BB86 /* TabbarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A170A43A2B7926C50045BB86 /* TabbarMainView.swift */; };
 		A170A43E2B7927760045BB86 /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A170A43D2B7927760045BB86 /* HomeMainView.swift */; };
 		A170A4412B7927A40045BB86 /* ProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A170A4402B7927A40045BB86 /* ProfileMainView.swift */; };
@@ -32,6 +36,10 @@
 		A16877912B7B6258004DF88F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A16877942B7B7028004DF88F /* LabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButton.swift; sourceTree = "<group>"; };
 		A16877962B7B7461004DF88F /* DividerWithCenteredText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerWithCenteredText.swift; sourceTree = "<group>"; };
+		A168779B2B7B91A2004DF88F /* CoursesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesMainView.swift; sourceTree = "<group>"; };
+		A168779D2B7B91B4004DF88F /* LibrariesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesMainView.swift; sourceTree = "<group>"; };
+		A168779F2B7B91C5004DF88F /* ChatMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainView.swift; sourceTree = "<group>"; };
+		A16877A12B7B9520004DF88F /* TabBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBottomView.swift; sourceTree = "<group>"; };
 		A170A43A2B7926C50045BB86 /* TabbarMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarMainView.swift; sourceTree = "<group>"; };
 		A170A43D2B7927760045BB86 /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
 		A170A4402B7927A40045BB86 /* ProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainView.swift; sourceTree = "<group>"; };
@@ -67,13 +75,40 @@
 			path = Authorization;
 			sourceTree = "<group>";
 		};
+		A16877982B7B9019004DF88F /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				A168779B2B7B91A2004DF88F /* CoursesMainView.swift */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		A16877992B7B9051004DF88F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A168779D2B7B91B4004DF88F /* LibrariesMainView.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A168779A2B7B90DB004DF88F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A168779F2B7B91C5004DF88F /* ChatMainView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		A170A4362B7924E90045BB86 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				A168778B2B7AB611004DF88F /* Authorization */,
-				A170A43F2B79278E0045BB86 /* Profile */,
-				A170A43C2B7927620045BB86 /* Home */,
 				A170A4392B7926AA0045BB86 /* Tabbar */,
+				A170A43C2B7927620045BB86 /* Home */,
+				A16877982B7B9019004DF88F /* Courses */,
+				A16877992B7B9051004DF88F /* Libraries */,
+				A168779A2B7B90DB004DF88F /* Chat */,
+				A170A43F2B79278E0045BB86 /* Profile */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -82,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				A170A43A2B7926C50045BB86 /* TabbarMainView.swift */,
+				A16877A12B7B9520004DF88F /* TabBottomView.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -266,9 +302,13 @@
 				A19C56272B791D4E0038D291 /* DevRushApp.swift in Sources */,
 				A168778E2B7AB64D004DF88F /* AuthorizationMainView.swift in Sources */,
 				A170A44A2B7940EC0045BB86 /* Font+Ext.swift in Sources */,
+				A16877A22B7B9520004DF88F /* TabBottomView.swift in Sources */,
 				A170A44E2B7942F10045BB86 /* Constants.swift in Sources */,
+				A16877A02B7B91C5004DF88F /* ChatMainView.swift in Sources */,
+				A168779C2B7B91A2004DF88F /* CoursesMainView.swift in Sources */,
 				A16877972B7B7461004DF88F /* DividerWithCenteredText.swift in Sources */,
 				A170A43B2B7926C50045BB86 /* TabbarMainView.swift in Sources */,
+				A168779E2B7B91B4004DF88F /* LibrariesMainView.swift in Sources */,
 				A170A4512B7949110045BB86 /* TextInputView.swift in Sources */,
 				A170A44C2B7941650045BB86 /* Color+Ext.swift in Sources */,
 				A16877952B7B7028004DF88F /* LabelButton.swift in Sources */,
