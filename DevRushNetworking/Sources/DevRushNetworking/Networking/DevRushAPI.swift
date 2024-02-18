@@ -12,27 +12,43 @@ import SessionWorker
 
 public struct DevRushAPI {
     public typealias APIResponse = (data: Data, response: URLResponse)
+    
+    private let token: String
+    
+    //MARK: - init(_:)
+    public init(token: String) {
+        self.token = token
+    }
 
-    func login(body: LoginRequest) {
+    public func login(body: LoginRequest) {
         
     }
     
 }
 
 private extension DevRushAPI {
-    private func requestPublisher(_ endpoint: Endpoint, body: Encodable) -> AnyPublisher<APIResponse, Error> {
+    func requestPublisher(_ endpoint: Endpoint, body: Encodable? = nil) -> AnyPublisher<APIResponse, Error> {
         Just(endpoint)
             .map(\.request)
-            .tryMap(apply(body: body))
+            .tryMap(addBody(body))
+            .map(addToken(token))
             .map(SessionWorker.init)
             .flatMap({ $0.requestPublisher() })
             .eraseToAnyPublisher()
     }
     
-    private func apply(body: Encodable) -> (URLRequest) throws -> URLRequest {
+    func addBody(_ body: Encodable?) -> (URLRequest) throws -> URLRequest {
         {
             var request = $0
-            request.httpBody = try JSONEncoder().encode(body)
+            request.httpBody = try body.map { try JSONEncoder().encode($0) }
+            return request
+        }
+    }
+    
+    func addToken(_ token: String) -> (URLRequest) -> URLRequest {
+        {
+            var request = $0
+            request.addValue(token, forHTTPHeaderField: "Authorization")
             return request
         }
     }
