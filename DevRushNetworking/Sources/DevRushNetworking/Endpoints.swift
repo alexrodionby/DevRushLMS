@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Endpoint
 
 extension Endpoint {
     static func withCommonHeaderFields(path: String) -> Self {

@@ -5,12 +5,22 @@ import PackageDescription
 
 let package = Package(
     name: "DevRushNetworking",
+    platforms: [
+        .macOS(.v10_15),
+        .iOS(.v13)
+    ],
     products: [
         .library(name: "DevRushNetworking", targets: ["DevRushNetworking"]),
     ],
     targets: [
+        .target(name: "SessionWorker"),
+        .target(name: "Endpoint"),
         .target(
-            name: "DevRushNetworking"),
+            name: "DevRushNetworking",
+            dependencies: [
+                "Endpoint",
+                "SessionWorker"
+            ]),
         .testTarget(
             name: "DevRushNetworkingTests",
             dependencies: ["DevRushNetworking"]),

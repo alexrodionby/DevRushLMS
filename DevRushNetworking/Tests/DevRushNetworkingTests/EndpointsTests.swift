@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Endpoint
 @testable import DevRushNetworking
 
 final class EndpointsTests: XCTestCase {

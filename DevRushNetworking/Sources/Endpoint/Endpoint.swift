@@ -31,7 +31,8 @@ public struct Endpoint {
         return url
     }
     
-    var request: URLRequest {
+    //MARK: - Request
+    public var request: URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         headers.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
@@ -39,7 +40,7 @@ public struct Endpoint {
     }
     
     //MARK: - init(_:)
-    init(
+    public init(
         path: String,
         method: HTTPMethod = .GET,
         headers: [String : String] = .init(),
@@ -53,7 +54,7 @@ public struct Endpoint {
 }
 
 //MARK: - Constructors
-extension Endpoint {
+public extension Endpoint {
     func httpMethod(_ method: HTTPMethod) -> Self {
         Endpoint(path: self.path, method: method, headers: self.headers, queryItems: self.queryItems)
     }
@@ -62,7 +63,7 @@ extension Endpoint {
         Endpoint(
             path: self.path,
             method: self.method,
-            headers: Dictionary(uniqueKeysWithValues: headers),
+            headers: self.headers.merging(headers, uniquingKeysWith: { $1 }),
             queryItems: self.queryItems
         )
     }
@@ -73,7 +74,7 @@ extension Endpoint {
 }
 
 //MARK: - HTTPMethod
-extension Endpoint {
+public extension Endpoint {
     enum HTTPMethod: String {
         case GET
         case POST
