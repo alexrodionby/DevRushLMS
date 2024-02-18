@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86CB3F2E2B8215FA005E517D /* DevRushNetworking in Resources */ = {isa = PBXBuildFile; fileRef = 86CB3F2D2B8215FA005E517D /* DevRushNetworking */; };
 		A168778E2B7AB64D004DF88F /* AuthorizationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168778D2B7AB64D004DF88F /* AuthorizationMainView.swift */; };
 		A16877902B7B60FA004DF88F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168778F2B7B60FA004DF88F /* ActionButton.swift */; };
 		A16877922B7B6258004DF88F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A16877912B7B6258004DF88F /* Localizable.xcstrings */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86CB3F2D2B8215FA005E517D /* DevRushNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DevRushNetworking; sourceTree = "<group>"; };
 		A168778D2B7AB64D004DF88F /* AuthorizationMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationMainView.swift; sourceTree = "<group>"; };
 		A168778F2B7B60FA004DF88F /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		A16877912B7B6258004DF88F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		A19C561A2B791D4E0038D291 = {
 			isa = PBXGroup;
 			children = (
+				86CB3F2D2B8215FA005E517D /* DevRushNetworking */,
 				A19C56252B791D4E0038D291 /* DevRush */,
 				A19C56242B791D4E0038D291 /* Products */,
 			);
@@ -284,6 +287,7 @@
 			files = (
 				A170A4462B793FCD0045BB86 /* Montserrat-Bold.ttf in Resources */,
 				A16877922B7B6258004DF88F /* Localizable.xcstrings in Resources */,
+				86CB3F2E2B8215FA005E517D /* DevRushNetworking in Resources */,
 				A170A4442B793FB10045BB86 /* Montserrat-Regular.ttf in Resources */,
 				A19C562E2B791D4F0038D291 /* Preview Assets.xcassets in Resources */,
 				A19C562B2B791D4F0038D291 /* Assets.xcassets in Resources */,
