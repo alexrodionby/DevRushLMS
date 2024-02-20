@@ -40,7 +40,7 @@ import Foundation
  
  */
 
-public struct LoginCredential: Decodable {
+public struct TokenResponse: Decodable {
     let accessToken: String
     let refreshToken: String
 }
@@ -48,6 +48,6 @@ public struct LoginCredential: Decodable {
 public struct LoginResponse: Decodable {
     public let success: Bool
     public let errors: [APIError]
-    public let body: LoginCredential?
+    public let body: TokenResponse?
     public let resetToken: Bool
 }

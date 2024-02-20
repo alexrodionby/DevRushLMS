@@ -14,27 +14,65 @@ public struct DevRushAPI {
     public typealias APIResponse = (data: Data, response: URLResponse)
     
     private let token: String
+    private let cache: URLCache
     
     //MARK: - init(_:)
-    public init(token: String) {
+    public init(
+        token: String,
+        cache: URLCache = .shared
+    ) {
         self.token = token
+        self.cache = cache
     }
 
-    public func login(body: LoginRequest) {
-        
+    //MARK: - Public methods
+    public func login(body: LoginRequest) -> AnyPublisher<TokenResponse, DevRushError> {
+        requestPublisher(.login(), body: body)
+            .tryMap(checkHTTP(response:))
+            .decode(type: LoginResponse.self, decoder: JSONDecoder())
+            .tryMap(unwrapBody(_:))
+            .mapError(DevRushError.map(_:))
+            .eraseToAnyPublisher()
     }
     
 }
 
 private extension DevRushAPI {
+    func unwrapBody(_ response: LoginResponse) throws -> TokenResponse {
+        guard response.success else {
+            throw DevRushError.apiErrors(response.errors.map(\.message))
+        }
+        guard let body = response.body else {
+            throw DevRushError.responseBodyMissing
+        }
+        return body
+    }
+    
+    func checkHTTP(response: APIResponse) throws -> Data {
+        guard
+            let httpResponse = response.response as? HTTPURLResponse,
+            (200...299).contains(httpResponse.statusCode)
+        else {
+            throw DevRushError.badResponse
+        }
+        return response.data
+    }
+    
     func requestPublisher(_ endpoint: Endpoint, body: Encodable? = nil) -> AnyPublisher<APIResponse, Error> {
         Just(endpoint)
             .map(\.request)
             .tryMap(addBody(body))
             .map(addToken(token))
-            .map(SessionWorker.init)
-            .flatMap({ $0.requestPublisher() })
+            .flatMap(configSession(cache))
             .eraseToAnyPublisher()
+    }
+    
+    func configSession(_ cache: URLCache) -> (URLRequest) -> AnyPublisher<APIResponse, Error> {
+        { request in
+            SessionWorker(request)
+                .cache(cache)
+                .requestPublisher()
+        }
     }
     
     func addBody(_ body: Encodable?) -> (URLRequest) throws -> URLRequest {

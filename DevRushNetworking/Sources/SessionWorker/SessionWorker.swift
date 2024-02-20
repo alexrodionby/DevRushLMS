@@ -31,7 +31,7 @@ public struct SessionWorker {
     }
 }
 
-extension SessionWorker {
+public extension SessionWorker {
     @inlinable
     func timeoutForRequest(_ timeout: TimeInterval) -> Self {
         self.config.timeoutIntervalForRequest = timeout
