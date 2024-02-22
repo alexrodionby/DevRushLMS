@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "accessToken" : {
+
+    },
     "AuthorizationMainViewTitle" : {
       "localizations" : {
         "en" : {
@@ -206,6 +209,12 @@
       }
     },
     "ProfileMainView" : {
+
+    },
+    "refreshToken" : {
+
+    },
+    "Test query!" : {
 
     },
     "You don't have an account yet?" : {

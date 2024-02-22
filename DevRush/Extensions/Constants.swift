@@ -10,7 +10,7 @@
 import Foundation
 
 struct Constants {
-    static let scheme = "" // "https"
-    static let baseURL = "" // "api.kinopoisk.dev"
-    static let token = "" // "0ATEMGT-HP5M25J-NKQYGEY-J27TSJX"
+    static let scheme = "https"
+    static let baseURL = "api.accelonline.io"
+    static let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4M2R3X2Z5X0FrZURIZm9QWG5zREFnIiwianRpIjoiZTIwNTQ3ZjctNTM3Mi00ZDFlLWE0YjAtYmM1NzM0ZTUyMjg5IiwiaWF0IjoxNzA3ODUxODc3LCJleHAiOjIwMjM0NzEwNzcsInVzZXIiOiJ7XCJ0eXBlXCI6XCJhcGlcIixcImlkXCI6XCI4M2R3X2Z5X0FrZURIZm9QWG5zREFnXCIsXCJlbWFpbFwiOm51bGwsXCJmaXJzdE5hbWVcIjpcImRldnJ1c2hhcGlcIixcImxhc3ROYW1lXCI6bnVsbCxcInBob25lXCI6bnVsbCxcInNjaG9vbElkXCI6XCJPVVI2R19JZ0prQ3ZCZzVxdXJCMkFnXCIsXCJjb21tdW5pY2F0aW9uSWRcIjpudWxsLFwiY29uY3VycmVuY3lTdGFtcFwiOm51bGwsXCJzZXNzaW9uSWRcIjpudWxsLFwiY2hhdFVzZXJEYXRhXCI6e1wiaWRcIjpcIjRUaHpkYlh0bGtPcVVseFpwU3FQZmdcIixcInJvbGVzXCI6WzBdfX0iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zeXN0ZW0iOiJBZG1pbiIsIm5iZiI6MTcwNzg1MTg3NywiaXNzIjoiQWNjZWwiLCJhdWQiOiJhZG1pbi5hY2NlbG9ubGluZS5pbyJ9._vEk5-WkU3UCSQvBQ8Pf69yvbv0qLT8ZfpA8I459tQA"
 }

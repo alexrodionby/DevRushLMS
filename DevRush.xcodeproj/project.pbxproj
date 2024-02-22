@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A15DB5912B80C4F000DDE668 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB58C2B80C4F000DDE668 /* HTTPClient.swift */; };
+		A15DB5922B80C4F000DDE668 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB58D2B80C4F000DDE668 /* APIError.swift */; };
+		A15DB5932B80C4F000DDE668 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB58E2B80C4F000DDE668 /* ContentType.swift */; };
+		A15DB5942B80C4F000DDE668 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB58F2B80C4F000DDE668 /* HTTPMethod.swift */; };
+		A15DB5952B80C4F000DDE668 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB5902B80C4F000DDE668 /* APIEndpoint.swift */; };
+		A15DB5992B80C6B600DDE668 /* TestMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB5982B80C6B600DDE668 /* TestMainView.swift */; };
+		A15DB59B2B80C7F400DDE668 /* AuthorizationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB59A2B80C7F400DDE668 /* AuthorizationEndpoint.swift */; };
+		A15DB59D2B80CEDF00DDE668 /* TestMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB59C2B80CEDF00DDE668 /* TestMainViewModel.swift */; };
+		A15DB5A02B80CF7900DDE668 /* UserLoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15DB59F2B80CF7900DDE668 /* UserLoginResponseModel.swift */; };
 		A168778E2B7AB64D004DF88F /* AuthorizationMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168778D2B7AB64D004DF88F /* AuthorizationMainView.swift */; };
 		A16877902B7B60FA004DF88F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168778F2B7B60FA004DF88F /* ActionButton.swift */; };
 		A16877922B7B6258004DF88F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A16877912B7B6258004DF88F /* Localizable.xcstrings */; };
@@ -31,6 +40,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A15DB58C2B80C4F000DDE668 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		A15DB58D2B80C4F000DDE668 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A15DB58E2B80C4F000DDE668 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		A15DB58F2B80C4F000DDE668 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A15DB5902B80C4F000DDE668 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		A15DB5982B80C6B600DDE668 /* TestMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainView.swift; sourceTree = "<group>"; };
+		A15DB59A2B80C7F400DDE668 /* AuthorizationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationEndpoint.swift; sourceTree = "<group>"; };
+		A15DB59C2B80CEDF00DDE668 /* TestMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainViewModel.swift; sourceTree = "<group>"; };
+		A15DB59F2B80CF7900DDE668 /* UserLoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginResponseModel.swift; sourceTree = "<group>"; };
 		A168778D2B7AB64D004DF88F /* AuthorizationMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationMainView.swift; sourceTree = "<group>"; };
 		A168778F2B7B60FA004DF88F /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		A16877912B7B6258004DF88F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -67,6 +85,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A15DB5892B80C44E00DDE668 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A15DB58A2B80C48200DDE668 /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A15DB58A2B80C48200DDE668 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A15DB58B2B80C4A500DDE668 /* Base */,
+				A15DB5962B80C50800DDE668 /* Endpoints */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A15DB58B2B80C4A500DDE668 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A15DB58C2B80C4F000DDE668 /* HTTPClient.swift */,
+				A15DB58D2B80C4F000DDE668 /* APIError.swift */,
+				A15DB5902B80C4F000DDE668 /* APIEndpoint.swift */,
+				A15DB58F2B80C4F000DDE668 /* HTTPMethod.swift */,
+				A15DB58E2B80C4F000DDE668 /* ContentType.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A15DB5962B80C50800DDE668 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				A15DB59A2B80C7F400DDE668 /* AuthorizationEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		A15DB5972B80C69800DDE668 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A15DB5982B80C6B600DDE668 /* TestMainView.swift */,
+				A15DB59C2B80CEDF00DDE668 /* TestMainViewModel.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		A15DB59E2B80CF2F00DDE668 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A15DB59F2B80CF7900DDE668 /* UserLoginResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A168778B2B7AB611004DF88F /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +181,7 @@
 				A16877992B7B9051004DF88F /* Libraries */,
 				A168779A2B7B90DB004DF88F /* Chat */,
 				A170A43F2B79278E0045BB86 /* Profile */,
+				A15DB5972B80C69800DDE668 /* Test */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -191,6 +264,8 @@
 				A19C56342B791DE40038D291 /* Application */,
 				A170A4362B7924E90045BB86 /* Screens */,
 				A170A44F2B7948BC0045BB86 /* Components */,
+				A15DB59E2B80CF2F00DDE668 /* Models */,
+				A15DB5892B80C44E00DDE668 /* Services */,
 				A170A4482B7940D20045BB86 /* Extensions */,
 				A19C56352B791DED0038D291 /* Resources */,
 				A19C562C2B791D4F0038D291 /* Preview Content */,
@@ -299,10 +374,17 @@
 			files = (
 				A170A43E2B7927760045BB86 /* HomeMainView.swift in Sources */,
 				A170A4412B7927A40045BB86 /* ProfileMainView.swift in Sources */,
+				A15DB5A02B80CF7900DDE668 /* UserLoginResponseModel.swift in Sources */,
+				A15DB5932B80C4F000DDE668 /* ContentType.swift in Sources */,
+				A15DB5912B80C4F000DDE668 /* HTTPClient.swift in Sources */,
 				A19C56272B791D4E0038D291 /* DevRushApp.swift in Sources */,
 				A168778E2B7AB64D004DF88F /* AuthorizationMainView.swift in Sources */,
 				A170A44A2B7940EC0045BB86 /* Font+Ext.swift in Sources */,
+				A15DB5952B80C4F000DDE668 /* APIEndpoint.swift in Sources */,
 				A16877A22B7B9520004DF88F /* TabBottomView.swift in Sources */,
+				A15DB59B2B80C7F400DDE668 /* AuthorizationEndpoint.swift in Sources */,
+				A15DB5942B80C4F000DDE668 /* HTTPMethod.swift in Sources */,
+				A15DB59D2B80CEDF00DDE668 /* TestMainViewModel.swift in Sources */,
 				A170A44E2B7942F10045BB86 /* Constants.swift in Sources */,
 				A16877A02B7B91C5004DF88F /* ChatMainView.swift in Sources */,
 				A168779C2B7B91A2004DF88F /* CoursesMainView.swift in Sources */,
@@ -310,9 +392,11 @@
 				A170A43B2B7926C50045BB86 /* TabbarMainView.swift in Sources */,
 				A168779E2B7B91B4004DF88F /* LibrariesMainView.swift in Sources */,
 				A170A4512B7949110045BB86 /* TextInputView.swift in Sources */,
+				A15DB5992B80C6B600DDE668 /* TestMainView.swift in Sources */,
 				A170A44C2B7941650045BB86 /* Color+Ext.swift in Sources */,
 				A16877952B7B7028004DF88F /* LabelButton.swift in Sources */,
 				A16877902B7B60FA004DF88F /* ActionButton.swift in Sources */,
+				A15DB5922B80C4F000DDE668 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
