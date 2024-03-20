@@ -88,5 +88,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+DevRushSolo.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 .DS_Store
-DevRush.xcodeproj/project.xcworkspace/contents.xcworkspacedata
