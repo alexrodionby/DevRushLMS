@@ -15,7 +15,6 @@ struct AuthorizationMainView: View {
     @State private var emailTextFieldBorderColor: Color = .lightDarkC5
     @State private var passwordTextValue: String = .init()
     @State private var passwordTextFieldBorderColor: Color = .lightDarkC5
-    @State private var path: NavigationPath = .init()
     
     private var authorizationMainViewTitle: LocalizedStringKey = LocalizedStringKey("authorizationMainViewTitle")
     private var emailTextFieldLabel: LocalizedStringKey = LocalizedStringKey("emailTextFieldLabel")
@@ -33,58 +32,60 @@ struct AuthorizationMainView: View {
     }
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $authorizationVM.navigationPath) {
             ZStack {
                 Color.baseWhiteDark
                     .ignoresSafeArea()
                 
-                VStack(alignment: .center, spacing: mainStackSpacing) {
-                    
-                    VStack(alignment: .leading, spacing: textFieldStackSpacing) {
-                        Text(emailTextFieldLabel)
-                            .foregroundStyle(.lightDarkC2)
-                            .font(.system(size: 14, weight: .regular, design: .default))
-                        EmailTextField(textFieldValue: $emailTextValue, textFieldBorderColor: $emailTextFieldBorderColor)
-                    }
-                    
-                    VStack(alignment: .leading, spacing: textFieldStackSpacing) {
-                        Text(passwordTextFieldLabel)
-                            .foregroundStyle(.lightDarkC2)
-                            .font(.system(size: 14, weight: .regular, design: .default))
-                        PasswordTextField(textFieldValue: $passwordTextValue, textFieldBorderColor: $passwordTextFieldBorderColor)
-                    }
-                    
-                    MainActionButton(buttonLableText: actionButtonText) {
-                        print("--- Нажали на кнопку Войти ---")
-                        authorizationVM.loginUser(inputData: ["email": emailTextValue,
-                                                              "password": passwordTextValue])
-                    }
-                    .padding(.top)
-                    
-                    NavigationLink(value: "forgotPassword") {
-                        Text(forgotPasswordValue)
-                    }
-                    .foregroundStyle(.blue1)
-                    .font(.system(size: 14, weight: .bold, design: .default))
-                    
-                    DividerWithText()
+                ScrollView {
+                    VStack(alignment: .center, spacing: mainStackSpacing) {
+                        
+                        VStack(alignment: .leading, spacing: textFieldStackSpacing) {
+                            Text(emailTextFieldLabel)
+                                .foregroundStyle(.lightDarkC2)
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                            EmailTextField(textFieldValue: $emailTextValue, textFieldBorderColor: $emailTextFieldBorderColor)
+                        }
+                        
+                        VStack(alignment: .leading, spacing: textFieldStackSpacing) {
+                            Text(passwordTextFieldLabel)
+                                .foregroundStyle(.lightDarkC2)
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                            PasswordTextField(textFieldValue: $passwordTextValue, textFieldBorderColor: $passwordTextFieldBorderColor)
+                        }
+                        
+                        MainActionButton(buttonLableText: actionButtonText) {
+                            print("--- Нажали на кнопку Войти ---")
+                            authorizationVM.loginUser(inputData: ["email": emailTextValue,
+                                                                  "password": passwordTextValue])
+                        }
                         .padding(.top)
-                    
-                    Spacer()
-                    
-                    VStack {
-                        Text(accountBottomLabelText)
-                            .foregroundStyle(.lightDarkC2)
-                            .font(.system(size: 14, weight: .regular, design: .default))
-                        NavigationLink(value: "registration") {
-                            Text(registerBottomLabelText)
+                        
+                        NavigationLink(value: "forgotPassword") {
+                            Text(forgotPasswordValue)
                         }
                         .foregroundStyle(.blue1)
                         .font(.system(size: 14, weight: .bold, design: .default))
+                        
+                        DividerWithText()
+                            .padding(.top)
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text(accountBottomLabelText)
+                                .foregroundStyle(.lightDarkC2)
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                            NavigationLink(value: "registration") {
+                                Text(registerBottomLabelText)
+                            }
+                            .foregroundStyle(.blue1)
+                            .font(.system(size: 14, weight: .bold, design: .default))
+                        }
                     }
+                    .padding(.horizontal)
+                    .padding(.top)
                 }
-                .padding(.horizontal)
-                .padding(.top)
             }
             .onTapGesture {
                 hideKeyboard()
@@ -93,16 +94,21 @@ struct AuthorizationMainView: View {
             .navigationDestination(for: String.self) { text in
                 switch text {
                 case "forgotPassword":
-                    Text("forgotPassword")
+                    ForgotPasswordMainView()
                 case "registration":
                     RegistrationMainView()
                 case "tabbar":
                     Text("tabbar")
+                case "privacyPolicy":
+                    PrivacyPolicyMainView()
+                case "rulesOfService":
+                    RulesOfServiceMainView()
                 default:
                     Text("default view")
                 }
             }
         }
+        .environmentObject(authorizationVM)
     }
 }
 

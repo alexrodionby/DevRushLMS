@@ -17,6 +17,86 @@
         }
       }
     },
+    "accountEnterBottomLabelText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Login"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войти"
+          }
+        }
+      }
+    },
+    "accountEnterTitleText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you already have an account?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У вас уже есть аккаунт?"
+          }
+        }
+      }
+    },
+    "accountRegistrationBottomLabelText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By clicking continue, you agree to:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажимая продолжить вы соглашаетесь с:"
+          }
+        }
+      }
+    },
+    "actionContinueButtonTextTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Продолжить"
+          }
+        }
+      }
+    },
+    "actionSendButtonTextTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Submit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отправить"
+          }
+        }
+      }
+    },
     "authorizationMainViewActionButtonText" : {
       "localizations" : {
         "en" : {
@@ -64,6 +144,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Чат"
+          }
+        }
+      }
+    },
+    "codeTextFieladLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the code"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите код"
+          }
+        }
+      }
+    },
+    "codeTextFieladPlaceholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0000"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0000"
           }
         }
       }
@@ -122,6 +234,22 @@
         }
       }
     },
+    "emailTextFieldStaticLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Почта"
+          }
+        }
+      }
+    },
     "FeedMainView" : {
 
     },
@@ -141,8 +269,37 @@
         }
       }
     },
-    "forgotPassword" : {
-
+    "forgotPasswordMainMessage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An access code has been sent to your email. Enter the sent code."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На вашу почту был отправлен код доступа.\nВведите отправленный код."
+          }
+        }
+      }
+    },
+    "forgotPasswordMainViewTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forgot your password?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Забыли пароль?"
+          }
+        }
+      }
     },
     "forgotPasswordValue" : {
       "localizations" : {
@@ -195,6 +352,38 @@
         }
       }
     },
+    "newPasswordMainMessage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We have reset your old password. \nTo restore access to your account, create a new one."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы сбросили ваш старый пароль. \nЧтобы восстановить доступ к аккаунту создайте новый."
+          }
+        }
+      }
+    },
+    "newPasswordViewTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новый пароль"
+          }
+        }
+      }
+    },
     "or" : {
       "localizations" : {
         "en" : {
@@ -227,6 +416,22 @@
         }
       }
     },
+    "passwordEnterTextFieldLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm the password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подтвердите пароль"
+          }
+        }
+      }
+    },
     "passwordTextFieldLabel" : {
       "localizations" : {
         "en" : {
@@ -242,6 +447,25 @@
           }
         }
       }
+    },
+    "privacyPolicyLabelText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Политикой конфиденциальности"
+          }
+        }
+      }
+    },
+    "PrivacyPolicyMainView" : {
+
     },
     "ProfileTabbarName" : {
       "localizations" : {
@@ -275,6 +499,22 @@
         }
       }
     },
+    "registrationMainViewActionButtonText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Register"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зарегистрироваться"
+          }
+        }
+      }
+    },
     "registrationMainViewTitle" : {
       "localizations" : {
         "en" : {
@@ -291,8 +531,75 @@
         }
       }
     },
+    "rulesOfServiceLabelText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The rules of the service"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правилами сервиса"
+          }
+        }
+      }
+    },
+    "RulesOfServiceMainView" : {
+
+    },
+    "secondPasswordTextFieldLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm the password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подтвердите пароль"
+          }
+        }
+      }
+    },
     "tabbar" : {
 
+    },
+    "userNameTextFieldLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your name"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите ваше имя"
+          }
+        }
+      }
+    },
+    "userNameTextFieldPlaceholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

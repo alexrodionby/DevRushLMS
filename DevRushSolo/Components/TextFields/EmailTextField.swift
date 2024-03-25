@@ -17,6 +17,8 @@ struct EmailTextField: View {
     var textFieldHeight: CGFloat = 45
     var textFieldStrokeLineWidth: CGFloat = 1
     var textFieldInternalPadding: CGFloat = 12
+    var keyboardType: UIKeyboardType = .emailAddress
+    var fillColor: Color = .lightDarkC6
     
     var body: some View {
         HStack {
@@ -25,12 +27,12 @@ struct EmailTextField: View {
                 .padding(textFieldInternalPadding)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
-                .keyboardType(.emailAddress)
+                .keyboardType(keyboardType)
         }
         .frame(height: textFieldHeight)
         .background {
             RoundedRectangle(cornerRadius: textFieldCornerRadius)
-                .fill(.lightDarkC6)
+                .fill(fillColor)
                 .overlay {
                     RoundedRectangle(cornerRadius: textFieldCornerRadius)
                         .stroke(textFieldBorderColor, lineWidth: textFieldStrokeLineWidth)

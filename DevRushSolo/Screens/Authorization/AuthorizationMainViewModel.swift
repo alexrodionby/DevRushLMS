@@ -13,6 +13,8 @@ class AuthorizationMainViewModel: ObservableObject {
     
     @ObservedObject var userData = UserDataGlobalModel.shared
     
+    @Published var navigationPath: NavigationPath = .init()
+    
     private var network: HTTPClient = .init()
     private var keychain: KeychainService = .init()
     private let jwtService: JWTService = .init()
